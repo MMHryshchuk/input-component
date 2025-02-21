@@ -26,7 +26,7 @@ const TextInput = forwardRef<HTMLInputElement, PropsType>(
           {...props}
         />
         {error && (
-          <span id={`${props.id}-error-text`} className={styles.error}>
+          <span id={`${props.id}-error-text`} className={styles.errorMessage}>
             {error}
           </span>
         )}
