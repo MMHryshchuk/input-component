@@ -1,0 +1,68 @@
+@import '../styles/variables.scss';
+@import '../styles/typography.scss';
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.label {
+  font: 'On Air Var';
+  font-size: $dimension-m;
+  font-weight: $font-label-m-weight;
+  color: $color-content-on-neutral-xx-hight;
+  line-height: $font-label-m-line-height;
+  letter-spacing: $font-label-m-letter-spacing;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.optional {
+  font-size: $font-label-s-size;
+  font-weight: $font-label-s-weight;
+  line-height: $font-label-s-line-height;
+  color: $color-content-on-neutral-low;
+}
+
+.input {
+  width: 100%;
+  padding: $dimension-s $dimension-xs $dimension-s $dimension-m;
+  gap: $dimension-xs;
+  font-size: 16px;
+  border: 1px solid $color-surface-x-high;
+  border-radius: $dimension-radius-input;
+  outline: none;
+  background: $color-surface-x-low;
+
+  &::placeholder {
+    color: $color-content-on-neutral-low;
+  }
+
+  &:focus {
+    border-color: $color-state-default-focus;
+  }
+}
+
+.error {
+  border-color: $color-content-on-neutral-danger;
+
+  &:focus {
+    border-color: $color-content-on-neutral-danger;
+  }
+}
+
+.errorMessage {
+  text-align: start;
+  font-size: $font-label-s-size;
+  font-weight: $font-label-s-weight;
+  line-height: $font-label-s-line-height;
+  color: $color-content-on-neutral-danger;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
